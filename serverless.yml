@@ -1,0 +1,19 @@
+service: python-lambda-template
+frameworkVersion: '3'
+
+
+plugins:
+  - serverless-offline
+  
+provider:
+  name: aws
+  runtime: python3.9
+
+functions:
+  lambda-function:
+    handler: src.main.handler
+    events:
+      - http:
+          path: api
+          method: any
+          cors: true
