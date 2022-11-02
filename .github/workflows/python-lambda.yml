@@ -33,8 +33,9 @@ jobs:
       run: |
         source .github/workflows/scripts/unit-test.sh
     - name: Package
+      run: |
+        source .github/workflows/scripts/package.sh
+    - name: Create artifact
       uses: actions/upload-artifact@v3
       path: |
           function.zip
-      run: |
-        source .github/workflows/scripts/package.sh
