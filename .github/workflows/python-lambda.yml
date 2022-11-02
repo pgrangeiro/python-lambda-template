@@ -37,5 +37,6 @@ jobs:
         source .github/workflows/scripts/package.sh
     - name: Create artifact
       uses: actions/upload-artifact@v3
-      path: |
-          function.zip
+      with:
+        path: |
+            function.zip
